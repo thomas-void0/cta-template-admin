@@ -3,9 +3,7 @@ import { Navigate, RouteObject } from 'react-router'
 import { RouteConfig } from '@/core/Router/type'
 import { lazy } from 'react'
 import { lazyLoad } from '@/core/Router'
-import iconBrandRule from './img/icon-brand-rule.svg'
-import iconReportBrand from './img/icon-report-brand.svg'
-import iconBrandManage from './img/icon-brand-manage.svg'
+import { BoldOutlined } from '@ant-design/icons'
 
 const routes: RouteConfig[] = [
 	{
@@ -14,28 +12,63 @@ const routes: RouteConfig[] = [
 		children: [
 			{
 				index: true,
-				element: <Navigate to={'/brandManage/brandRule'} />
+				element: <Navigate to={'/parent/child1'} />
 			},
 			{
-				path: 'brandManage',
-				name: '品牌管理',
-				// icon: <BoldOutlined />,
-				icon: <img src={iconBrandManage} width={14} height={14} />,
+				path: 'parent',
+				name: '仅在左边显示',
+				icon: <BoldOutlined />,
 				layout: {
 					topItemRender: false
 				},
 				children: [
 					{
-						path: 'brandRule',
-						name: '品牌规则',
-						icon: <img src={iconBrandRule} width={14} height={14} />,
-						element: lazyLoad(lazy(() => import('@/pages/BrandManage/BrandRule')))
+						path: 'child1',
+						name: '子组件1',
+						keepAlive: true,
+						element: lazyLoad(lazy(() => import('@/pages/Parent/Child1')))
 					},
 					{
-						path: 'reportBrand',
-						name: '报备品牌',
-						icon: <img src={iconReportBrand} width={14} height={14} />,
-						element: lazyLoad(lazy(() => import('@/pages/BrandManage/ReportBrand')))
+						path: 'child2',
+						name: '子组件2',
+						element: lazyLoad(lazy(() => import('@/pages/Parent/Child2')))
+					}
+				]
+			},
+			{
+				path: 'head',
+				name: '仅在头部显示',
+				icon: <BoldOutlined />,
+				layout: {
+					leftItemRender: false
+				},
+				children: [
+					{
+						path: 'head1',
+						name: '头部1',
+						element: <div>头部1</div>
+					},
+					{
+						path: 'head2',
+						name: '头部2',
+						element: <div>头部2</div>
+					}
+				]
+			},
+			{
+				path: 'leftAndHead',
+				name: '左侧和头部都显示',
+				icon: <BoldOutlined />,
+				children: [
+					{
+						path: 'common1',
+						name: '共有1',
+						element: <div>共有1</div>
+					},
+					{
+						path: 'common2',
+						name: '共有2',
+						element: <div>共有2</div>
 					}
 				]
 			}
