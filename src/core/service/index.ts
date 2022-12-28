@@ -341,7 +341,7 @@ export const DEFAULT_CONFIG = {
 	withCredentials: true,
 	requestOptions: {
 		/* @ts-ignore */
-		urlPrefix: 'http://test-gw.newrank.cn:18080/api'
+		urlPrefix: import.meta.env.VITE_PREFIX_URL
 	},
 	headers: {
 		'n-token': '342bdbf6864146f59730fbd6eace18f9'
