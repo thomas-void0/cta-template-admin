@@ -6,7 +6,7 @@ import { Items } from '@/core/context/router'
 import { MenuState } from '../..'
 import { isFunction } from 'lodash-es'
 import styles from './index.module.css'
-import { withRouter } from '@/core/Router'
+import withRouter from '@/core/Router/withRouter'
 
 const { Sider } = Layout
 

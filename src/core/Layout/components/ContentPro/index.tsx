@@ -1,6 +1,5 @@
 import { FC, useState } from 'react'
-import { KeepAlive } from '@/core/Router'
-import { CacheEle, KeepAliveProps } from '@/core/Router/KeepAlive'
+import KeepAlive, { CacheEle, KeepAliveProps } from '@/core/Router/KeepAlive'
 import { Content } from 'antd/es/layout/layout'
 import { useRoutes } from 'react-router'
 import HistoryTabPro from '../HistoryTabPro'

@@ -8,7 +8,7 @@ import { Items } from '@/core/context/router'
 import { Layout } from 'antd'
 import { isFunction } from 'lodash-es'
 import styles from './index.module.css'
-import { withRouter } from '@/core/Router'
+import withRouter from '@/core/Router/withRouter'
 
 const { Header } = Layout
 

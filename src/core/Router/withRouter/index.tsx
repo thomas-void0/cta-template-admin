@@ -1,9 +1,8 @@
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
 
 import { ComponentType } from 'react'
-import { Items } from '@/core/context/router'
+import { Items, useRouteConfig } from '@/core/context/router'
 import { Merge } from '../type'
-import { useRouteConfig } from '..'
 
 type Location = ReturnType<typeof useLocation>
 type DefaultParams = ReturnType<typeof useParams>

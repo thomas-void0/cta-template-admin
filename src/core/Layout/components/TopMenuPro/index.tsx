@@ -1,7 +1,7 @@
 // 头部菜单栏
 import { Menu } from 'antd'
 import { MenuState } from '../..'
-import { withRouter } from '@/core/Router'
+import withRouter from '@/core/Router/withRouter'
 
 export interface TopMenuProProps {
 	/* 修改菜单状态 */

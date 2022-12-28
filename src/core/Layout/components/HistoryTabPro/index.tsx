@@ -1,7 +1,6 @@
 // 浏览足迹页签
 
 import { TabsProps } from 'antd'
-import { searchRoute, withRouter } from '@/core/Router'
 import { Dispatch, useEffect, useMemo, useRef, useState } from 'react'
 import routes from '@/routes'
 import styles from './index.module.css'
@@ -11,6 +10,8 @@ import { useClickAway, useSize } from 'ahooks'
 import { CacheEle } from '@/core/Router/KeepAlive'
 import { CloseOutlined } from '@ant-design/icons'
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd'
+import withRouter from '@/core/Router/withRouter'
+import { searchRoute } from '@/core/Router/utils'
 
 type OperationType = 'RELOAD' | 'CLOSE' | 'CLOSE_LEFT' | 'CLOSE_RIGHT' | 'CLOSE_OTHER'
 

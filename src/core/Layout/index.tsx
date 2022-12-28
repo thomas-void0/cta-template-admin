@@ -1,5 +1,4 @@
 import HeaderPro, { BaseHeaderProProps } from './components/HeaderPro'
-import { withRouter } from '../Router'
 import LeftSiderPro, { BaseLeftSiderProProps } from './components/LeftSiderPro'
 import { useEffect, useState } from 'react'
 import { useLocation, useRoutes } from 'react-router'
@@ -9,6 +8,7 @@ import { layoutSettings } from '@/config/core'
 import routes from '@/routes'
 import ContentPro from './components/ContentPro'
 import { Watermark, WatermarkOptions } from '@pansy/watermark'
+import withRouter from '../Router/withRouter'
 
 export interface LayoutProProps extends BaseLeftSiderProProps, BaseHeaderProProps {
 	/* 默认是否收起 */

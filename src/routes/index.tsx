@@ -2,8 +2,8 @@ import { Navigate, RouteObject } from 'react-router'
 
 import { RouteConfig } from '@/core/Router/type'
 import { lazy } from 'react'
-import { lazyLoad } from '@/core/Router'
 import { BoldOutlined, WifiOutlined, ThunderboltOutlined } from '@ant-design/icons'
+import { lazyLoad } from '@/core/Router/utils'
 
 const routes: RouteConfig[] = [
 	{
