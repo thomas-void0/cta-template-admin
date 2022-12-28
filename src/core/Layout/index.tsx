@@ -1,13 +1,12 @@
 import HeaderPro, { BaseHeaderProProps } from './components/HeaderPro'
 import { withRouter } from '../Router'
 import LeftSiderPro, { BaseLeftSiderProProps } from './components/LeftSiderPro'
-import { Suspense, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useLocation, useRoutes } from 'react-router'
 
 import { Layout } from 'antd'
 import { layoutSettings } from '@/config/core'
 import routes from '@/routes'
-import { ProcessLoading } from '@/components/Loading'
 import ContentPro from './components/ContentPro'
 import { Watermark, WatermarkOptions } from '@pansy/watermark'
 
@@ -80,34 +79,32 @@ const LayoutPro = withRouter(props => {
 	}, [location.pathname])
 
 	return (
-		<Suspense fallback={<ProcessLoading />}>
-			<Layout style={{ height: '100vh' }}>
-				<HeaderPro
-					logo={logo}
-					logoWidth={siderWidth}
-					renderHeader={renderHeader}
-					headerHeight={headerHeight}
-					renderHeaderMenu={renderHeaderMenu}
-					headerRight={headerRight}
-					setCollapsed={setCollapsed}
+		<Layout style={{ height: '100vh' }}>
+			<HeaderPro
+				logo={logo}
+				logoWidth={siderWidth}
+				renderHeader={renderHeader}
+				headerHeight={headerHeight}
+				renderHeaderMenu={renderHeaderMenu}
+				headerRight={headerRight}
+				setCollapsed={setCollapsed}
+				collapsed={collapsed}
+				menuState={menuState}
+				onMenuStateChange={setMenuState}
+			/>
+			<Layout>
+				<LeftSiderPro
+					siderWidth={siderWidth}
 					collapsed={collapsed}
+					renderSider={renderSider}
 					menuState={menuState}
 					onMenuStateChange={setMenuState}
 				/>
-				<Layout>
-					<LeftSiderPro
-						siderWidth={siderWidth}
-						collapsed={collapsed}
-						renderSider={renderSider}
-						menuState={menuState}
-						onMenuStateChange={setMenuState}
-					/>
-					<ContentPro maxLength={maxLength} isTabs={isTabs}>
-						{ele}
-					</ContentPro>
-				</Layout>
+				<ContentPro maxLength={maxLength} isTabs={isTabs}>
+					{ele}
+				</ContentPro>
 			</Layout>
-		</Suspense>
+		</Layout>
 	)
 })
 

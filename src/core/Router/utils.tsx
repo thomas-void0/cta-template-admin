@@ -7,7 +7,7 @@ import { cloneDeep, isObject } from 'lodash-es'
 
 import { Items } from '../context/router'
 import { Link } from 'react-router-dom'
-import { Spin } from 'antd'
+import { ProcessLoading } from '@/components/Loading'
 
 // 添加item项
 function addItem(args: AddItemArgs) {
@@ -168,19 +168,7 @@ export function getItems(layoutReoutes: Routes, routeAccess: Record<string, bool
  */
 export const lazyLoad = (Com: LazyExoticComponent<any>): ReactNode => {
 	return (
-		<Suspense
-			fallback={
-				<Spin
-					size="large"
-					style={{
-						display: 'flex',
-						alignItems: 'center',
-						justifyContent: 'center',
-						height: '100%'
-					}}
-				/>
-			}
-		>
+		<Suspense fallback={<ProcessLoading />}>
 			<Com />
 		</Suspense>
 	)
