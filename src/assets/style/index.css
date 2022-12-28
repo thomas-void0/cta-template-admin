@@ -1,0 +1,25 @@
+@import 'antd/dist/reset.css';
+@import './light.var.css';
+@import './tailwind.css';
+
+@font-face {
+	font-weight: normal;
+	font-family: 'DINPro';
+	font-style: normal;
+	src: local('DINPro Medium'), url('../font/DINPro-Medium.otf');
+	font-display: swap;
+}
+
+@font-face {
+	font-weight: normal;
+	font-family: 'PuHui';
+	font-style: normal;
+	src: url('../font/AlibabaPuHuiTi-2-45-Light.otf');
+	font-display: swap;
+}
+
+body{
+	font-size: 14px;
+	font-weight: 400;
+	color: var(--text-default);
+}

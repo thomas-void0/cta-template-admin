@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+	<defs>
+		<style>.a-icon-official-xiaohongshu{fill:#ff2552;}.b-icon-official-xiaohongshu{fill:none;}.c-icon-official-xiaohongshu{fill:#fff;}</style>
+	</defs>
+	<g transform="translate(-0.135)">
+		<rect class="a-icon-official-xiaohongshu" width="16" height="16" rx="2" transform="translate(0.135)"/>
+		<g transform="translate(1.133 1.134)">
+			<rect class="b-icon-official-xiaohongshu" width="14" height="14" transform="translate(0.001 -0.134)"/>
+			<path class="c-icon-official-xiaohongshu" d="M128.2,378.53a5.663,5.663,0,0,1-.1,1.779,1.157,1.157,0,0,1-.1.4s.148.3.494.84c.643-.543.594-3.015.594-3.015Zm3.954,1.829a7.434,7.434,0,0,1-.1-1.779h-.889s-.1,2.471.593,3.015a5.194,5.194,0,0,1,.494-.84C132.2,380.655,132.2,380.507,132.151,380.359Zm-2.471.939h-.594l.3.692h.79c.3,0,.4-.544.4-.544v-4h-.89V381.3Zm4-1.137.742-1.482h-.742l.445-1.235h-.84l-.643,1.631a.218.218,0,0,0,.2.3h.445l-.494,1.137a.218.218,0,0,0,.2.3h1.087l.247-.643h-.641Zm-1.037,1.038-.445.791h1.384l.347-.791h-1.286Zm3.558-2.619h.445v-.89h-1.977v.841h.593v2.619h-.791l-.4.84h2.866V381.2H136.2Zm4.053.791h-.2v-.791a.791.791,0,0,0-.79-.84h-.594v-.4h-.84v.4h-.593v.79h.594v.791h-.841v.791h.84v1.877h.84v-1.828h1.582v1.186h-.84l.3.691h.691a.655.655,0,0,0,.642-.643V380.21A.741.741,0,0,0,140.256,379.37Zm-.988,0h-.594v-.841h.594Zm1.828-1.235a.4.4,0,1,0-.791,0v.395h.4A.425.425,0,0,0,141.1,378.135Z" transform="translate(-127.995 -373.364)"/>
+		</g>
+	</g>
+</svg>

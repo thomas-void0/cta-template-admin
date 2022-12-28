@@ -1,0 +1,16 @@
+.content {
+	margin: 24px;
+	border-radius: 4px;
+	flex: auto;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+
+	:global {
+		.ant-layout-content {
+			background: #fff;
+			height: 100%;
+			padding: 24px;
+		}
+	}
+}

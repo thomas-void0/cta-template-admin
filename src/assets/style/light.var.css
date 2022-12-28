@@ -1,0 +1,25 @@
+:root {
+	/* 主色 */
+	--primary-color: rgb(114, 127, 255);
+	/* 成功色 */
+	--success-color: rgb(0, 179, 84);
+	/* 危险警告色 */
+	--danger-color: rgb(255, 64, 26);
+	/* 链接色 */
+	--link-color: rgb(0, 136, 255);
+	/* warning */
+	--warn-color: rgb(255, 183, 0);
+
+	/* normal mode */
+	--text-default: rgb(24, 26, 26) /* 默认文本 */ 
+	--text-secondary: rgb(61, 66, 66); /* 二级文本 */ 
+	--text-third: rgb(98, 106, 106); /* 三级文本 */ 
+	--text-fourth: rgb(136, 145, 145); /* 四级文本 */ 
+	--text-fifth: rgb(175, 182, 182); /* 五级文本（失效、暗提示） */ 
+	--border-color:rgb(225, 230, 230); /* 边框分割线 */
+	--th-color:rgb(237, 242, 242); /* 表头颜色 */
+	--disabled-color:rgb(236, 238, 238); /* 禁用&失效背景 */
+	--card-modal-color:rgb(255, 255, 255); /* 卡片&弹窗底色 */ 
+	--bg-color:rgb(247, 250, 250); /* 背景色 */ 
+	--black-color: rgb(44, 48, 48);
+}

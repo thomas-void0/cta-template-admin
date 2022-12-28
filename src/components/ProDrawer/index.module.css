@@ -1,0 +1,44 @@
+.handler {
+	position: absolute;
+	top: 4px;
+	left: 0;
+	z-index: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	font-size: 16px;
+	text-align: center;
+	background: rgb(112, 126, 255);
+	border-radius: 4px 0 0 4px;
+	transform: translateX(-100%);
+	cursor: pointer;
+	pointer-events: auto;
+	transition: all 0.3s;
+
+	.closeIcon {
+		transform: rotate(0deg);
+		transition: all 0.3s;
+	}
+
+	&:hover {
+		width: 58px;
+		transition: all 0.3s;
+		.closeIcon {
+			transform: rotate(90deg);
+			transition: all 0.3s;
+		}
+	}
+}
+
+.drawer {
+	:global {
+		.ant-drawer-header {
+			padding: 0;
+		}
+		.ant-drawer-footer {
+			padding: 16px 24px;
+		}
+	}
+}

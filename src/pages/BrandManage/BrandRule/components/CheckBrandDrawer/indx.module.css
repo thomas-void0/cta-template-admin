@@ -1,0 +1,131 @@
+.drawerBox {
+	font-size: 16px;
+	:global {
+		.ant-drawer-body {
+			padding: 0;
+		}
+		.ant-drawer-header-title {
+			height: 0;
+		}
+	}
+}
+.drawerTitle {
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #e1e6e6;
+	font-size: 14px;
+	font-weight: bold;
+	color: #3d4242;
+	padding: 0 24px;
+	font-family: Microsoft YaHei-Bold, Microsoft YaHei;
+}
+.brandHead {
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.headLeft {
+	display: flex;
+	> img {
+		width: 40px;
+		height: 40px;
+		background-color: #c7c7c7;
+		border-radius: 4px;
+		margin-right: 4px;
+		margin-left: 24px;
+	}
+	.brandName {
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: space-around;
+		> span:first-child {
+			font-weight: 900;
+			font-size: 18px;
+		}
+		> span:nth-child(2) {
+			font-size: 12px;
+		}
+	}
+	.brandTag {
+		display: inline-block;
+		background-color: #4b92e3;
+		padding: 6px 16px;
+		color: #ffffff;
+		height: 28px;
+		border-radius: 8px;
+		margin-left: 24px;
+		white-space: nowrap;
+	}
+}
+.headRight {
+	display: flex;
+	.included {
+		display: inline-block;
+		background-color: #2a82e4;
+		color: #ffffff;
+		padding: 2px 4px;
+		width: 58px;
+		height: 18px;
+		line-height: 14px;
+		text-align: center;
+		border-radius: 2px;
+	}
+	.operation {
+		margin-left: 12px;
+		margin-right: 24px;
+		display: flex;
+		flex-direction: column;
+		> span {
+			display: inline-block;
+			text-align: center;
+			width: 58px;
+			padding: 2px 4px;
+			height: 18px;
+			line-height: 14px;
+			border-radius: 2px;
+		}
+		> span:first-child {
+			background-color: #c7c7c7;
+			color: #ffffff;
+		}
+		> span:nth-child(2) {
+			background-color: #2a82e4;
+			color: #ffffff;
+			margin-top: 4px;
+		}
+	}
+}
+.brandInfo {
+	margin: 0 24px;
+	.brandInfoHead {
+		display: flex;
+		justify-content: space-between;
+		/* > span:first-child {
+		} */
+		> span:nth-child(2) {
+			display: inline-block;
+			text-align: center;
+			width: 58px;
+			padding: 2px 4px;
+			height: 18px;
+			line-height: 14px;
+			border-radius: 2px;
+			background-color: #c7c7c7;
+			color: #ffffff;
+		}
+	}
+}
+.smallTitle {
+	font-weight: 600;
+	font-size: 15px;
+}
+.smallTitle:before {
+	content: '';
+	display: inline-block;
+	width: 3px;
+	height: 15px;
+	background-color: #2a82e4;
+	transform: translateY(2px);
+	margin-right: 4px;
+}

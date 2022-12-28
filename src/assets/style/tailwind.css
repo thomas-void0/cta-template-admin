@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --tw-primary-color: 114 127 255;/* 主色 */
+		--tw-success-color: 0 179 84;/* 成功色 */
+		--tw-danger-color: 255 64 26; /* 危险警告色 */
+		--tw-link-color: 0 136 255;	/* 链接色 */
+		--tw-warn-color: 255 183 0;	/* warning */
+		--tw-text-default: 24 26 26; /* 默认文本 */ 
+		--tw-text-secondary: 61 66 66; /* 二级文本 */ 
+		--tw-text-third: 98 106 106; /* 三级文本 */ 
+		--tw-text-fourth: 136 145 145; /* 四级文本 */ 
+		--tw-text-fifth: 175 182 182; /* 五级文本（失效、暗提示） */ 
+		--tw-border-color: 225 230 230; /* 边框分割线 */
+		--tw-th-color:237 242 242; /* 表头颜色 */
+		--tw-disabled-color: 236 238 238; /* 禁用&失效背景 */
+		--tw-card-modal-color: 255 255 255; /* 卡片&弹窗底色 */ 
+		--tw-bg-color: 247 250 250; /* 背景色 */
+		--tw-black-color: 44 48 48 1;
+  }
+}

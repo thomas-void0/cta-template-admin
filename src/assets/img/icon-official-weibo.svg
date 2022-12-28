@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+	<defs>
+		<style>.a-icon-official-xiaohongshu{fill:#ff330e;}.b-icon-official-xiaohongshu{fill:none;}.c-icon-official-xiaohongshu,.d-icon-official-xiaohongshu{fill:#fff;}.c-icon-official-xiaohongshu{opacity:0;}</style>
+	</defs>
+	<g transform="translate(-0.269)">
+		<rect class="a-icon-official-xiaohongshu" width="16" height="16" rx="2" transform="translate(0.269)"/>
+		<g transform="translate(1.134 1.133)">
+			<rect class="b-icon-official-xiaohongshu" width="13" height="14" transform="translate(0.135 -0.134)"/>
+			<g transform="translate(0.904 0.5)">
+				<g transform="translate(0 0)">
+					<rect class="c-icon-official-xiaohongshu" width="11" height="13" transform="translate(0.449 -0.134)"/>
+					<g transform="translate(0 1.346)">
+						<path class="d-icon-official-xiaohongshu" d="M96.12,719.76a1.755,1.755,0,0,0-1.257-1.125h0c-.184-.018-.351-.122-.229-.334a1.1,1.1,0,0,0-.086-1.281c-.434-.443-1.382-.275-2.055.01s-.634.086-.613-.109.382-1.359-.722-1.5c-1.448-.181-3.305,1.654-3.961,2.711a4.382,4.382,0,0,0-.835,2.675h.006c.119,1.491,2.264,2.68,4.892,2.68,2.26,0,4.164-.88,4.727-2.075A.083.083,0,0,1,96,721.4a1.815,1.815,0,0,0,.131-.394A2.307,2.307,0,0,0,96.12,719.76Zm-5.181,3.076c-1.871,0-3.389-1.03-3.389-2.3s1.516-2.3,3.389-2.3,3.389,1.03,3.389,2.3S92.81,722.835,90.939,722.835Z" transform="translate(-86.356 -713.932)"/>
+						<path class="d-icon-official-xiaohongshu" d="M109.173,718.2a.245.245,0,0,0,.106.023.273.273,0,0,0,.253-.173,1.4,1.4,0,0,0,.106-.541,1.372,1.372,0,0,0-1.355-1.386,1.325,1.325,0,0,0-.526.11.287.287,0,0,0-.146.37.274.274,0,0,0,.357.152l.005,0a.79.79,0,0,1,.313-.066.826.826,0,0,1,.74,1.144.282.282,0,0,0,.146.37Z" transform="translate(-99.982 -714.388)"/>
+						<path class="d-icon-official-xiaohongshu" d="M107.329,711.287a3.152,3.152,0,0,0-.908.134.426.426,0,0,0-.279.526.412.412,0,0,0,.507.288l.006,0a2.326,2.326,0,0,1,.671-.1,2.383,2.383,0,0,1,2.352,2.408,2.526,2.526,0,0,1-.1.7.424.424,0,0,0,.275.526.4.4,0,0,0,.12.018.417.417,0,0,0,.4-.3,3.344,3.344,0,0,0,.136-.944,3.223,3.223,0,0,0-3.179-3.254Z" transform="translate(-99.041 -711.287)"/>
+						<path class="d-icon-official-xiaohongshu" d="M95.678,725.641a1.63,1.63,0,1,0,1.807,1.62A1.72,1.72,0,0,0,95.678,725.641Zm-.591,2.672a.649.649,0,1,1,.634-.664v.015a.642.642,0,0,1-.635.649h0Zm1.184-1.169a.253.253,0,0,1-.335.127l-.005,0a.268.268,0,0,1-.064-.365.254.254,0,0,1,.335-.127l.005,0a.269.269,0,0,1,.061.365Z" transform="translate(-91.406 -720.496)"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,36 @@
+.head {
+	background: white !important;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-inline: 24px !important;
+	/* padding-inline-end: 24px !important;
+	padding-inline-start: 0 !important; */
+}
+
+.trigger {
+	padding: 0 24px;
+	font-size: 18px;
+	line-height: 64px;
+	cursor: pointer;
+	transition: color 0.3s;
+
+	&:hover {
+		color: var(--primary-color);
+	}
+}
+
+.logo {
+	text-align: center;
+	line-height: 60px;
+	height: 60px;
+
+	img {
+		width: 100%;
+	}
+}
+
+.left {
+	display: flex;
+	justify-content: space-between;
+}

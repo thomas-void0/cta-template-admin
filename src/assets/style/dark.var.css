@@ -1,0 +1,16 @@
+:root {
+	/* 主色 */
+	--primary-color: rgb(114, 127, 255);
+
+	/* drak mode */
+	--text-default: rgb(242, 243, 243) /* 默认文本 */ 
+	--text-secondary: rgb(202, 206, 206); /* 二级文本 */ 
+	--text-third: rgb(162, 169, 169); /* 三级文本 */ 
+	--text-fourth: rgb(122, 133, 133); /* 四级文本 */ 
+	--text-fifth: rgb(86, 93, 93); /* 五级文本（失效、暗提示） */ 
+	--border-color:rgb(97, 102, 102); /* 边框分割线 */
+	--th-color:rgb(70, 74, 74); /* 表头颜色 */
+	--disabled-color:rgb(64, 68, 68); /* 禁用&失效背景 */
+	--card-modal-color:rgb(57, 60, 60); /* 卡片&弹窗底色 */ 
+	--bg-color:rgb(44, 48, 48); /* 背景色 */ 
+}

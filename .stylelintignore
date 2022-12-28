@@ -1,0 +1,7 @@
+/dist
+**/*.js
+**/*.jsx
+**/*.tsx
+**/*.ts
+/src/assets/**/*.css
+/node_modules
