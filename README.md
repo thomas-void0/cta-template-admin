@@ -1,6 +1,7 @@
 # react + vite 模板项目
 
-![image](https://user-images.githubusercontent.com/48620706/209600139-0abe4185-3aef-4677-ba04-1e993650bb18.png)
+![image](https://user-images.githubusercontent.com/48620706/209778605-428a6444-55b2-457a-aa0d-42b2cb908b4c.png)
+
 
 # 一、权限管理
 
