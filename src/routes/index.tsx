@@ -3,7 +3,7 @@ import { Navigate, RouteObject } from 'react-router'
 import { RouteConfig } from '@/core/Router/type'
 import { lazy } from 'react'
 import { lazyLoad } from '@/core/Router'
-import { BoldOutlined } from '@ant-design/icons'
+import { BoldOutlined, WifiOutlined, ThunderboltOutlined } from '@ant-design/icons'
 
 const routes: RouteConfig[] = [
 	{
@@ -38,7 +38,7 @@ const routes: RouteConfig[] = [
 			{
 				path: 'head',
 				name: '仅在头部显示',
-				icon: <BoldOutlined />,
+				icon: <ThunderboltOutlined />,
 				layout: {
 					leftItemRender: false
 				},
@@ -58,7 +58,7 @@ const routes: RouteConfig[] = [
 			{
 				path: 'leftAndHead',
 				name: '左侧和头部都显示',
-				icon: <BoldOutlined />,
+				icon: <WifiOutlined />,
 				children: [
 					{
 						path: 'common1',

@@ -21,15 +21,15 @@ export default defineConfig(({ mode }) => {
 				legacy({ modernPolyfills: true, renderLegacyChunks: false })
 		].filter(Boolean),
 		server: {
-			host: 'dev.e.newrank.cn',
+			host: '127.0.0.1',
 			port: 3000,
 			open: true,
 			proxy: {
-				'/api/custom/yzPlatform/oss': {
+				'/api': {
 					target: proxyTarget.api,
 					changeOrigin: true
 				},
-				'/nr/user': {
+				'/user': {
 					target: proxyTarget.nr,
 					changeOrigin: true
 				}

@@ -3,9 +3,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding-inline: 24px !important;
-	/* padding-inline-end: 24px !important;
-	padding-inline-start: 0 !important; */
+	/* padding-inline: 24px !important; */
+	padding-inline-end: 24px !important;
+	padding-inline-start: 0 !important;
 }
 
 .trigger {
@@ -21,13 +21,14 @@
 }
 
 .logo {
-	text-align: center;
-	line-height: 60px;
-	height: 60px;
-
-	img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* text-align: center; */
+	/* img {
 		width: 100%;
-	}
+		height: 100%;
+	} */
 }
 
 .left {

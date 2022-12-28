@@ -344,7 +344,7 @@ export const DEFAULT_CONFIG = {
 		urlPrefix: import.meta.env.VITE_PREFIX_URL
 	},
 	headers: {
-		'n-token': '342bdbf6864146f59730fbd6eace18f9'
+		'n-token': '123456'
 	}
 }
 

@@ -69,7 +69,10 @@ const HeaderPro = withRouter<HeaderProProps>(props => {
 	return (
 		<Header className={styles.head} style={{ height: `${headerHeight}px` }}>
 			<div className={styles.left}>
-				<div className={styles.logo} style={{ width: `${logoWidth}px` }}>
+				<div
+					className={styles.logo}
+					style={{ width: `${logoWidth}px`, height: `${headerHeight}px` }}
+				>
 					{renderLogo()}
 				</div>
 				{createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {

@@ -1,7 +1,6 @@
 const proxyTarget = {
-	api: 'http://test.api.newrank.cn',
-	ade: 'http://test.a.newrank.cn',
-	nr: 'http://test.main.newrank.cn',
-	erp: 'http://test.erp.newrank.cn'
+	api: 'http://test.api.cn',
+	ade: 'http://test.a.cn',
+	nr: 'http://test.main.cn'
 }
 export default proxyTarget

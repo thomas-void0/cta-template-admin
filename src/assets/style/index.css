@@ -22,4 +22,5 @@ body{
 	font-size: 14px;
 	font-weight: 400;
 	color: var(--text-default);
+	padding: 0;
 }
