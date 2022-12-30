@@ -21,7 +21,6 @@
 		]
 	},
 	"dependencies": {
-		"@pansy/watermark": "^2.3.0",
 		"@react-spring/web": "^9.6.1",
 		"ahooks": "^3.7.4",
 		"antd": "^5.1.1",

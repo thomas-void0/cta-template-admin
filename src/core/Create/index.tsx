@@ -1,4 +1,3 @@
-// import BeforeRouter from '../Router/BeforeRouter'
 import { FC } from 'react'
 import GlobalProvider from '../Global'
 import RouterView from '../Router/RouterView'

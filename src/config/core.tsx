@@ -9,10 +9,7 @@ import { LayoutProProps } from '@/core/Layout'
 // layout配置
 export const layoutSettings: LayoutProProps = {
 	logo: IconLogo,
-	headerRight: <HeaderRight />,
-	watermark: {
-		text: '27'
-	}
+	headerRight: <HeaderRight />
 	// isTabs:false
 }
 
@@ -35,7 +32,7 @@ export const getInitialState = async (): Promise<InitialStateType> => {
 	// }
 
 	values.userInfo = {
-		nickName: 'thomas-vo2id0'
+		nickName: 'thomas-void'
 	}
 	// values.settings.watermark = {
 	// 	text: values.userInfo.nickName

@@ -7,7 +7,6 @@ import { Layout } from 'antd'
 import { layoutSettings } from '@/config/core'
 import routes from '@/routes'
 import ContentPro from './components/ContentPro'
-import { Watermark, WatermarkOptions } from '@pansy/watermark'
 import withRouter from '../Router/withRouter'
 
 export interface LayoutProProps extends BaseLeftSiderProProps, BaseHeaderProProps {
@@ -17,8 +16,6 @@ export interface LayoutProProps extends BaseLeftSiderProProps, BaseHeaderProProp
 	isTabs?: boolean
 	/* keepalive最大缓存数量 */
 	maxLength?: number
-	/* 水印配置 */
-	watermark?: WatermarkOptions
 }
 
 export type MenuState = {
@@ -49,8 +46,7 @@ const LayoutPro = withRouter(props => {
 		defaultCollapsed = false,
 		isTabs = true,
 		headerRight,
-		maxLength,
-		watermark
+		maxLength
 	} = layoutSettings || props
 
 	const { location } = props
@@ -61,12 +57,6 @@ const LayoutPro = withRouter(props => {
 		openKeys: [],
 		selectedKeys: []
 	})
-
-	// 添加水印
-	useEffect(() => {
-		// eslint-disable-next-line no-new
-		watermark && new Watermark(watermark)
-	}, [watermark])
 
 	useEffect(() => {
 		setMenuState(prev => {
