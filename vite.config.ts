@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import react from '@vitejs/plugin-react'
 import legacy from '@vitejs/plugin-legacy'
 import proxyTarget from './src/config/proxy'
 import svgrPlugin from 'vite-plugin-svgr'
@@ -40,7 +40,7 @@ export default defineConfig(({ mode }) => {
 			reportCompressedSize: false,
 			chunkSizeWarningLimit: 2000,
 			sourcemap: false,
-			minify: mode === 'production' ? 'esbuild' : false
+			minify: 'esbuild'
 		}
 	}
 })
