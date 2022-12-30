@@ -11,7 +11,7 @@ export const layoutSettings: LayoutProProps = {
 	logo: IconLogo,
 	headerRight: <HeaderRight />,
 	watermark: {
-		text: ''
+		text: '456'
 	}
 	// isTabs:false
 }
@@ -37,9 +37,9 @@ export const getInitialState = async (): Promise<InitialStateType> => {
 	values.userInfo = {
 		nickName: 'thomas-void0'
 	}
-	values.settings.watermark = {
-		text: values.userInfo.nickName
-	}
+	// values.settings.watermark = {
+	// 	text: values.userInfo.nickName
+	// }
 
 	return values
 }
