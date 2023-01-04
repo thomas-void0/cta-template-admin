@@ -1,9 +1,10 @@
 # react + vite 模板项目
 
-[线上demo](https://th-template.vercel.app/)
+[线上 demo](https://th-template.vercel.app/)
 
-![image](https://user-images.githubusercontent.com/48620706/209778605-428a6444-55b2-457a-aa0d-42b2cb908b4c.png)
+<!-- ![image](https://user-images.githubusercontent.com/48620706/209778605-428a6444-55b2-457a-aa0d-42b2cb908b4c.png) -->
 
+![example](./public/example.gif)
 
 # 一、权限管理
 
