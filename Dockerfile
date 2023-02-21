@@ -15,12 +15,14 @@ COPY . .
 RUN yarn build
 
 FROM ${PROXY}:${PROXY_VERSION} as runer
-WORKDIR /workspace
-COPY --from=builder /workspace/dist ./dist
-COPY --from=builder /workspace/nginx.conf ./
-CMD envsubst </nginx.conf> /etc/nginx/nginx.conf \
-	&& cat /etc/nginx/nginx.conf \
-	&& nginx -g "daemon off;"
+LABEL maintainer="thomas-void0 <yjy15680489038@163.com>"
+WORKDIR /
+COPY /nginx/ /etc/nginx/
+COPY --from=builder /workspace/dist/ /usr/share/nginx/html/
+EXPOSE 80
+# CMD envsubst < /nginx.conf.template > /etc/nginx/nginx.conf \
+# 	&& cat /etc/nginx/nginx.conf \
+# 	&& nginx -g "daemon off;"
 
 # FROM ${NAME}:${VERSION} as runer
 # WORKDIR /workspace
