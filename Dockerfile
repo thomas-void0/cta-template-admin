@@ -17,6 +17,7 @@ RUN yarn build
 FROM ${PROXY}:${PROXY_VERSION} as runer
 WORKDIR /workspace
 COPY --from=builder /workspace/dist ./dist
+COPY --from=builder /workspace/nginx.conf ./
 CMD envsubst </nginx.conf> /etc/nginx/nginx.conf \
 	&& cat /etc/nginx/nginx.conf \
 	&& nginx -g "daemon off;"
