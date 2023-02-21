@@ -14,4 +14,4 @@ printf "==========del legacy container==========\n"
 docker rm -f th-template 2> /dev/null
 
 printf "==========run new container==========\n"
-docker run --name th-template -d -p 1314:3000 $TAG
+docker run --name th-template -d -p 1314:80 $TAG
