@@ -16,3 +16,7 @@ LICENSE
 yarn-error.log
 CNAME
 src/assets/style/*.css
+*.sh
+Dockerfile
+Dockerfile.test
+.dockerignore
