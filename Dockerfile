@@ -12,7 +12,18 @@ COPY --from=deps /workspace/node_modules ./node_modules
 COPY . .
 RUN yarn build
 
-FROM ${NAME}:${VERSION} as runer
+ARG PROXY=nginx
+ARG PROXY_VERSION=1.22.1
+
+FROM ${PROXY}:${PROXY_VERSION} as runer
 WORKDIR /workspace
-COPY --from=builder /workspace/dist ./
-CMD ["serve","-n","-s"]
+COPY --from=builder /workspace/dist ./dist
+CMD envsubst </nginx.conf> /etc/nginx/nginx.conf \
+	&& cat /etc/nginx/nginx.conf \
+	&& nginx -g "daemon off;"
+
+# FROM ${NAME}:${VERSION} as runer
+# WORKDIR /workspace
+# COPY --from=builder /workspace/dist ./
+# CMD ["serve","-n","-s"]
+
