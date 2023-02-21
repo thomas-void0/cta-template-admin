@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eu
 
-TAG=th-template:prodution
+TAG=th-template:production
 
 printf "==========del legacy images==========\n"
 docker rmi -f $TAG 2> /dev/null
