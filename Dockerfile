@@ -19,4 +19,5 @@ LABEL maintainer="thomas-void0 <yjy15680489038@163.com>"
 WORKDIR /
 COPY --from=builder /workspace/nginx.conf /etc/nginx/conf.d/
 COPY --from=builder /workspace/dist/ /usr/share/nginx/html/
+CMD rm -f /etc/nginx/conf.d/default.conf
 
