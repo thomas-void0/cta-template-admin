@@ -3,7 +3,7 @@ set -eu
 
 printf "==========start build images==========\n"
 
-TAG=th-template
+TAG=th-template:prodution
 docker build --build-arg NODE_IMAGE_TAG=18.14-alpine -t $TAG -f Dockerfile .
 
 printf "==========del legacy container==========\n"
