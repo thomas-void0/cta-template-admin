@@ -17,7 +17,7 @@ RUN yarn build
 FROM ${PROXY}:${PROXY_VERSION} as runer
 LABEL maintainer="thomas-void0 <yjy15680489038@163.com>"
 WORKDIR /
-COPY /nginx/ /etc/nginx/
+# COPY /etc/nginx/ /etc/nginx/
 COPY --from=builder /workspace/dist/ /usr/share/nginx/html/
 EXPOSE 80
 # CMD envsubst < /nginx.conf.template > /etc/nginx/nginx.conf \
