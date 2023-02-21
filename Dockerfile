@@ -1,5 +1,7 @@
 ARG NAME=node
 ARG VERSION=18.14-alpine
+ARG PROXY=nginx
+ARG PROXY_VERSION=1.22.1
 
 FROM ${NAME}:${VERSION} as deps
 WORKDIR /workspace
@@ -11,9 +13,6 @@ WORKDIR /workspace
 COPY --from=deps /workspace/node_modules ./node_modules
 COPY . .
 RUN yarn build
-
-ARG PROXY=nginx
-ARG PROXY_VERSION=1.22.1
 
 FROM ${PROXY}:${PROXY_VERSION} as runer
 WORKDIR /workspace
