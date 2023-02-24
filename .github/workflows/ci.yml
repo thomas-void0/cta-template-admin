@@ -40,7 +40,7 @@ jobs:
       # 构建镜像并上传到阿里云容器镜像仓库 (自行百度创建自己的镜像仓库)
       - name: Build and push
         id: docker_build
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v4
         with:
           context: .
           push: true
