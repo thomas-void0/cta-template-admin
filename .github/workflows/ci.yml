@@ -18,7 +18,7 @@ jobs:
     steps:
       # 检出当前代码（触发工作流时的commits）
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         
       # setup-qemu 如果您想使用 QEMU 添加仿真支持以便能够针对更多平台进行构建，则 action 会很有用
       - name: Set up QEMU
