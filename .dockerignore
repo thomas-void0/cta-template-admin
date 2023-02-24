@@ -13,3 +13,4 @@ node_modules
 .editorconfig
 renovate.json
 vercel.json
+build.sh
