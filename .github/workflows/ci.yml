@@ -1,10 +1,14 @@
 # 工作流程的名称
 name: Docker Image CI
 
-# 触发条件：当branch触发push（push，merge Pull Request），且 tag 为 image.xxx 时触发工作流。
+# 触发条件：当branch触发push（push，merge Pull Request）
 on:
   push:
-    tags: image.*
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
     
 # 工作流程，可包含多个作业
 jobs:
