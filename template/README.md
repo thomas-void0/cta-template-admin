@@ -1,14 +1,13 @@
 # react + vite 模板项目
-
 <!-- [在线预览](https://th-template.vercel.app/) -->
 
 一个可以实现路由 keepAlive，具有类似浏览器访问页签功能的模板项目。
 
-[阿里云在线预览](http://47.108.203.65) | [vercel online](https://th-template.vercel.app/)
+[阿里云在线预览](http://47.108.203.65)  |  [vercel online](https://th-template.vercel.app/)
 
 <!-- ![image](https://user-images.githubusercontent.com/48620706/209778605-428a6444-55b2-457a-aa0d-42b2cb908b4c.png) -->
 
-![example](./template/public/example.gif)
+![example](./public/example.gif)
 
 # 一、权限管理
 
@@ -17,16 +16,16 @@
 1. 在`src/config/access.ts`中,同 umi 使用方式一致，配置对应权限对象。
 
 ```ts
-import { InitialStateType } from "@/core/context/global";
+import { InitialStateType } from '@/core/context/global'
 
 export default function accessFactory(
-  initialState: InitialStateType
+	initialState: InitialStateType
 ): Record<string, boolean> {
-  // const { accessInfo } = initialState
+	// const { accessInfo } = initialState
 
-  return {
-    canNav1: false,
-  };
+	return {
+		canNav1: false
+	}
 }
 ```
 
@@ -54,14 +53,14 @@ layout: {
 
 ```tsx
 <Access access="enterprisePrivate-label-batchImport">
-  <Button onClick={handleBatchImport}>批量导入</Button>
+	<Button onClick={handleBatchImport}>批量导入</Button>
 </Access>
 ```
 
 2. `useAccess`hook：返回对应的 access key 是否包含在后端返回的权限列表中。
 
 ```ts
-const noticeUpdateAuth = useAccess("notice-update");
+const noticeUpdateAuth = useAccess('notice-update')
 ```
 
 # 二、keepAlive
@@ -101,8 +100,8 @@ const noticeUpdateAuth = useAccess("notice-update");
 
 ```ts
 interface ImportMetaEnv {
-  readonly VITE_NODE_ENV: "development" | "test" | "production";
-  readonly VITE_PREFIX_URL: string;
+	readonly VITE_NODE_ENV: 'development' | 'test' | 'production'
+	readonly VITE_PREFIX_URL: string
 }
 ```
 
