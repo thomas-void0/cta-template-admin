@@ -10,6 +10,14 @@
 
 ![example](./template/public/example.gif)
 
+# 模板下载使用
+
+可以通过 npx 命令安装此项目
+
+```shell
+npx create-template-app my-app --template admin
+```
+
 # 一、权限管理
 
 ## 路由权限
