@@ -1,7 +1,7 @@
 {
   "name": "cta-template-admin",
   "version": "1.0.0",
-  "description": "",
+  "description": "基于react18的模板项目，支持路由keepalive，历史访问页签等",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,15 +9,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thomas-void0/react-template.git"
+    "url": "git+https://github.com/thomas-void0/cta-template-admin.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "react",
+    "template",
+    "admin",
+    "keepalive",
+    "后台",
+    "模板"
+  ],
+  "author": "thomas-void0",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thomas-void0/react-template/issues"
+    "url": "https://github.com/thomas-void0/cta-template-admin/issues"
   },
-  "homepage": "https://github.com/thomas-void0/react-template#readme",
+  "homepage": "https://github.com/thomas-void0/cta-template-admin#readme",
   "devDependencies": {
     "conventional-changelog-cli": "^2.2.2"
   },
