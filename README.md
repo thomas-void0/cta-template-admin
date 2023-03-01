@@ -1,4 +1,7 @@
-# react + vite 模板项目 [![Docker Image CI](https://github.com/thomas-void0/cta-template-admin/actions/workflows/docker.yml/badge.svg)](https://github.com/thomas-void0/cta-template-admin/actions/workflows/docker.yml)
+# react + vite 模板项目  
+
+[![Docker Image CI](https://github.com/thomas-void0/cta-template-admin/actions/workflows/docker.yml/badge.svg)](https://github.com/thomas-void0/cta-template-admin/actions/workflows/docker.yml)
+[![Publish](https://github.com/thomas-void0/cta-template-admin/actions/workflows/publish.yml/badge.svg)](https://github.com/thomas-void0/cta-template-admin/actions/workflows/publish.yml)
 
 <!-- [在线预览](https://th-template.vercel.app/) -->
 
