@@ -63,6 +63,7 @@ const LeftSiderPro = withRouter<LeftSiderProProps>(props => {
 			<Menu
 				mode="inline"
 				items={leftItems}
+				className={styles['menu-border-none']}
 				selectedKeys={menuState.selectedKeys}
 				openKeys={menuState.openKeys}
 				onOpenChange={onOpenChange}
