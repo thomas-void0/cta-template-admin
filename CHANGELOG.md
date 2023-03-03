@@ -1,8 +1,9 @@
-## [1.0.1](https://github.com/thomas-void0/cta-template-admin/compare/v1.0.0...v1.0.1) (2023-03-03)
+## [1.1.1](https://github.com/thomas-void0/cta-template-admin/compare/v1.0.0...v1.1.1) (2023-03-03)
 
 
 ### Bug Fixes
 
+* 修复.gitignore文件被忽略问题 ([6e46b94](https://github.com/thomas-void0/cta-template-admin/commit/6e46b94645e6e8376c077e35aac55d3c1d436484))
 * 修复依赖安装error问题 ([cb87185](https://github.com/thomas-void0/cta-template-admin/commit/cb87185b2fdd59cf485c5d36025653728973e45d))
 * 修复huksy install错误问题 ([709122a](https://github.com/thomas-void0/cta-template-admin/commit/709122ae6e6bfeeed8b2b293749e50e0b670634a))
 * 修复huksy install错误问题 ([f432eb0](https://github.com/thomas-void0/cta-template-admin/commit/f432eb0cd97c0bf1763adc4f5addfc6a10689c56))
