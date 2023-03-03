@@ -5,6 +5,7 @@ const path = require("path")
 const { exec } = require('child_process');
 
 const gitDirPath = path.join(__dirname, "/.git")
+const gitIgnorePath = path.join(__dirname, "/.gitignore")
 
 // 获取git文件
 fs.access(gitDirPath, err => {
@@ -16,8 +17,45 @@ fs.access(gitDirPath, err => {
 })
 
 
+// 获取.gitignore文件
+function createGitIgnore() {
+	try {
+		fs.accessSync(gitIgnorePath)
+	} catch (error) {
+		const str = `
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+`
+		fs.writeFileSync(path.join(__dirname, ".gitignore"), str, { flag: "w" })
+	}
+}
+
 function husakyInstall() {
 	exec("husky install");
+	// create .gitignore
+	createGitIgnore()
 	// modify pkg
 	modifyPkg()
 	// del file
@@ -32,7 +70,7 @@ function modifyPkg() {
 	try {
 		const pkgPath = path.join(__dirname, "/package.json")
 		const pkgContent = fs.readFileSync(pkgPath, 'utf8')
-		const result = pkgContent.replace('"node ./huskyInit.cjs"', '"husky install"');
+		const result = pkgContent.replace('node ./gitInit.cjs', 'husky install');
 		fs.writeFileSync(pkgPath, result, 'utf8');
 	} catch (error) {
 		console.log('Error: Found error for Modify package.json file.')
