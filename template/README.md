@@ -3,11 +3,11 @@
 1. 安装依赖
 
 ```shell
-yarn build 
+npm install
 ```
 
 2. 启动项目
 
 ```
-yarn start
+npm run start
 ```
