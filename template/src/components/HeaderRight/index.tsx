@@ -5,20 +5,15 @@ import { Avatar, Button, Popover, Space, Typography } from 'antd'
 import { FC } from 'react'
 import styles from './index.module.css'
 import { reqLoginOut } from '@/api'
-import config from '@/config/memoryConfig'
 import { useGlobal } from '@/core'
+import { useNavigate } from 'react-router'
 
 const HeaderRight: FC<any> = () => {
 	const { globalState } = useGlobal()
+	const navigator = useNavigate()
 
 	function handleLoginOut() {
-		reqLoginOut()
-			.then(() => {
-				window.location.href = config.loginUrl
-			})
-			.catch(() => {
-				window.location.href = config.loginUrl
-			})
+		reqLoginOut().then(() => navigator('/login'))
 	}
 
 	return (
