@@ -12,6 +12,13 @@ export const reqLogin = (data: ReqLoginParams) => {
 	})
 }
 
+/* 获取用户信息 */
+export const reqGetUserInfo = () => {
+	return request.get({
+		url: '/user/getInfo'
+	})
+}
+
 /** 退出登录 */
 export const reqLoginOut = () => {
 	return request.post({

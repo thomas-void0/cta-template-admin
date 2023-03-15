@@ -1,16 +1,19 @@
 import { Button, Form, Input, message } from 'antd'
 import { reqLogin } from '@/api'
 import { useNavigate } from 'react-router'
+import { useGlobal } from '@/core'
 
 const Login = () => {
 	const navigate = useNavigate()
+	const { globalState, dispatch } = useGlobal()
 
 	const onFinish = (values: any) => {
 		reqLogin(values).then(res => {
 			const { success, msg, data } = res
 			if (success && data) {
 				message.success('登录成功')
-				navigate('/')
+				dispatch({ ...globalState, userInfo: data })
+				setTimeout(() => navigate('/'), 0)
 			} else {
 				message.error(msg)
 			}

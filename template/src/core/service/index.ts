@@ -4,7 +4,7 @@ import AxiosPro from './axiosPro'
 export const BASE_CONFIG: CreateAxiosDefaults<any> = {
 	baseURL: 'http://127.0.0.1:3003',
 	timeout: 5000,
-	// withCredentials: true,
+	withCredentials: true,
 	headers: {
 		'Content-Type': 'application/json;charset=UTF-8'
 	}

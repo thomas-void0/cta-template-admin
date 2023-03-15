@@ -12,11 +12,16 @@ const BeforeRouter = (props: BeforeRouterProps) => {
 	const { children } = props
 	const { pathname } = useLocation()
 	const {
-		globalState: { routeAccess }
+		globalState: { routeAccess, userInfo }
 	} = useGlobal()
 
 	const route = searchRoute(pathname, routes)
 	const { access } = route
+
+	// 判断是否登录
+	if (!userInfo) {
+		return <Navigate to="/login" replace />
+	}
 
 	// 判断是否有权限
 	if (access && routeAccess?.[access] === false) {
