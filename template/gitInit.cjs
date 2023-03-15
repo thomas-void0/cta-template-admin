@@ -31,12 +31,10 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-
 node_modules
 dist
 dist-ssr
 *.local
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -76,4 +74,3 @@ function modifyPkg() {
 		console.log('Error: Found error for Modify package.json file.')
 	}
 }
-

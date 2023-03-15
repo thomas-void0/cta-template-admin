@@ -4,8 +4,9 @@ import {
 	useImperativeHandle,
 	ForwardRefRenderFunction
 } from 'react'
-import { InboxOutlined } from '@ant-design/icons'
-import { Form, Upload, Modal, Input } from 'antd'
+import { Form, Upload, Modal, Input, UploadFile, UploadProps } from 'antd'
+import ImgCrop from 'antd-img-crop'
+import { RcFile } from 'antd/es/upload'
 
 export interface UserModalRef {
 	open: () => void
@@ -30,6 +31,33 @@ const onFinish = (values: any) => {
 
 const UserModal: ForwardRefRenderFunction<UserModalRef, {}> = (_, ref) => {
 	const [open, setOpen] = useState(false)
+	const [fileList, setFileList] = useState<UploadFile[]>([
+		{
+			uid: '-1',
+			name: 'image.png',
+			status: 'done',
+			url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png'
+		}
+	])
+
+	const onChange: UploadProps['onChange'] = ({ fileList: newFileList }) => {
+		setFileList(newFileList)
+	}
+
+	const onPreview = async (file: UploadFile) => {
+		let src = file.url as string
+		if (!src) {
+			src = await new Promise(resolve => {
+				const reader = new FileReader()
+				reader.readAsDataURL(file.originFileObj as RcFile)
+				reader.onload = () => resolve(reader.result as string)
+			})
+		}
+		const image = new Image()
+		image.src = src
+		const imgWindow = window.open(src)
+		imgWindow?.document.write(image.outerHTML)
+	}
 
 	useImperativeHandle(ref, () => ({
 		open() {
@@ -65,13 +93,17 @@ const UserModal: ForwardRefRenderFunction<UserModalRef, {}> = (_, ref) => {
 						getValueFromEvent={normFile}
 						noStyle
 					>
-						<Upload.Dragger name="files" action="/upload.do">
-							<p className="ant-upload-drag-icon">
-								<InboxOutlined />
-							</p>
-							<p className="ant-upload-text">Click or drag file to this area to upload</p>
-							<p className="ant-upload-hint">Support for a single or bulk upload.</p>
-						</Upload.Dragger>
+						<ImgCrop rotationSlider>
+							<Upload
+								action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+								listType="picture-card"
+								fileList={fileList}
+								onChange={onChange}
+								onPreview={onPreview}
+							>
+								{fileList.length < 5 && '+ Upload'}
+							</Upload>
+						</ImgCrop>
 					</Form.Item>
 				</Form.Item>
 			</Form>
