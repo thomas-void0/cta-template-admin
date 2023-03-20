@@ -15,6 +15,8 @@ const BeforeRouter = (props: BeforeRouterProps) => {
 		globalState: { routeAccess, userInfo }
 	} = useGlobal()
 
+	console.log('userInfo:', userInfo)
+
 	const route = searchRoute(pathname, routes)
 	const { access } = route
 

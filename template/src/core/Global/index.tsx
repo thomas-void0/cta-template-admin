@@ -11,14 +11,19 @@ export interface GlobalProviderProps {
 const GlobalProvider: FC<GlobalProviderProps> = props => {
 	const { children } = props
 	const [globalState, setGlobalState] = useState<InitialStateType>(initGlobalState)
+	const [isPending, setIsPending] = useState(true)
 
 	useEffect(() => {
-		getInitialState().then(values => {
-			// 获取路由权限
-			const routeAccess = accessFactory(values)
-			// 设置共享全局状态
-			setGlobalState({ ...values, routeAccess })
-		})
+		getInitialState()
+			.then(values => {
+				// 获取路由权限
+				const routeAccess = accessFactory(values)
+				// 设置共享全局状态
+				setGlobalState({ ...values, routeAccess })
+			})
+			.finally(() => {
+				setIsPending(false)
+			})
 	}, [])
 
 	return (
@@ -28,7 +33,7 @@ const GlobalProvider: FC<GlobalProviderProps> = props => {
 				dispatch: setGlobalState
 			}}
 		>
-			{children}
+			{!isPending && children}
 		</Provider>
 	)
 }

@@ -23,13 +23,14 @@ export default defineConfig(({ mode }) => {
 		server: {
 			host: '127.0.0.1',
 			port: 3000,
-			open: true
-			// proxy: {
-			// 	'/user': {
-			// 		target: proxyTarget.user,
-			// 		changeOrigin: true
-			// 	}
-			// }
+			open: true,
+			proxy: {
+				'/user': {
+					target: proxyTarget.user,
+					changeOrigin: true,
+					ws: true
+				}
+			}
 		},
 		build: {
 			target: 'es2015',
