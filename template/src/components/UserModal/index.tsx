@@ -5,7 +5,6 @@ import {
 	ForwardRefRenderFunction
 } from 'react'
 import { Form, Upload, Modal, Input, UploadFile, UploadProps } from 'antd'
-import ImgCrop from 'antd-img-crop'
 import { RcFile } from 'antd/es/upload'
 
 export interface UserModalRef {
@@ -65,8 +64,12 @@ const UserModal: ForwardRefRenderFunction<UserModalRef, {}> = (_, ref) => {
 		}
 	}))
 
+	function onModalClose() {
+		setOpen(false)
+	}
+
 	return (
-		<Modal title="编辑用户信息" open={open}>
+		<Modal title="编辑用户信息" open={open} onCancel={onModalClose}>
 			<Form
 				name="validate_other"
 				{...formItemLayout}
@@ -93,17 +96,15 @@ const UserModal: ForwardRefRenderFunction<UserModalRef, {}> = (_, ref) => {
 						getValueFromEvent={normFile}
 						noStyle
 					>
-						<ImgCrop rotationSlider>
-							<Upload
-								action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
-								listType="picture-card"
-								fileList={fileList}
-								onChange={onChange}
-								onPreview={onPreview}
-							>
-								{fileList.length < 5 && '+ Upload'}
-							</Upload>
-						</ImgCrop>
+						<Upload
+							action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+							listType="picture-card"
+							fileList={fileList}
+							onChange={onChange}
+							onPreview={onPreview}
+						>
+							{fileList.length < 5 && '+ Upload'}
+						</Upload>
 					</Form.Item>
 				</Form.Item>
 			</Form>

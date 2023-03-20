@@ -35,7 +35,7 @@ export default defineConfig(({ mode }) => {
 			target: 'es2015',
 			reportCompressedSize: false,
 			chunkSizeWarningLimit: 2000,
-			sourcemap: false,
+			sourcemap: mode !== 'production',
 			minify: 'esbuild'
 		}
 	}

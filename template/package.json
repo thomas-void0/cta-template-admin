@@ -8,8 +8,8 @@
 		"build:test": "tsc && vite build --mode test",
 		"build": "tsc && vite build  --mode production",
 		"preview": "vite preview",
-		"prepare": "node ./gitInit.cjs",
 		"lint-staged": "lint-staged",
+		"prepare": "node ./gitInit.cjs",
 		"lint:js": "eslint **/*.{js,jsx,ts,tsx}",
 		"lint:style": "stylelint --fix **/*.css"
 	},
@@ -21,6 +21,7 @@
 		]
 	},
 	"dependencies": {
+		"@ant-design/icons": "^5.0.1",
 		"@react-spring/web": "^9.6.1",
 		"ahooks": "^3.7.4",
 		"antd": "^5.1.1",
