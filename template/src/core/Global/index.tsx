@@ -1,4 +1,4 @@
-import { FC, ReactNode, useEffect, useMemo, useState } from 'react'
+import { FC, ReactNode, useEffect, useState } from 'react'
 import { InitialStateType, Provider, initGlobalState } from '../context/global'
 
 import accessFactory from '@/config/access'
@@ -21,15 +21,16 @@ const GlobalProvider: FC<GlobalProviderProps> = props => {
 		})
 	}, [])
 
-	const globalValue = useMemo(
-		() => ({
-			globalState,
-			dispatch: setGlobalState
-		}),
-		[globalState]
+	return (
+		<Provider
+			value={{
+				globalState,
+				dispatch: setGlobalState
+			}}
+		>
+			{children}
+		</Provider>
 	)
-
-	return <Provider value={globalValue}>{children}</Provider>
 }
 
 export default GlobalProvider

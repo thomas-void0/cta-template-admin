@@ -19,12 +19,12 @@ const BeforeRouter = (props: BeforeRouterProps) => {
 	const { access } = route
 
 	// 判断是否登录
-	if (!userInfo) {
+	if (!userInfo && route.path !== 'login') {
 		return <Navigate to="/login" replace />
 	}
 
 	// 判断是否有权限
-	if (access && routeAccess?.[access] === false) {
+	if (access && routeAccess?.[access] === false && route.path !== '403') {
 		return <Navigate to="/403" replace />
 	}
 
