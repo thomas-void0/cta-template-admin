@@ -1,5 +1,5 @@
 import { Button, Form, Input, message } from 'antd'
-import { reqLogin } from '@/api'
+// import { reqLogin } from '@/api'
 import { useNavigate } from 'react-router'
 import { useGlobal } from '@/core'
 
@@ -8,16 +8,26 @@ const Login = () => {
 	const { globalState, dispatch } = useGlobal()
 
 	const onFinish = (values: any) => {
-		reqLogin(values).then(res => {
-			const { success, msg, data } = res
-			if (success && data) {
-				message.success('登录成功')
-				dispatch({ ...globalState, userInfo: data })
-				setTimeout(() => navigate('/'), 0)
-			} else {
-				message.error(msg)
+		message.success('登录成功')
+		dispatch({
+			...globalState,
+			userInfo: {
+				headImgUrl:
+					'http://thirdwx.qlogo.cn/mmopen/ajNVdqHZLLC2ewqicnXrICphG1SrxbhqAAuRmF6uSwgUsmAbGzymZs8AMKokveib04nt77Uyic1ibdJCZj5EHiaYIE4FtA6xGXDPKR96MVvSAQicY/132',
+				nickName: '皮卡丘'
 			}
 		})
+		setTimeout(() => navigate('/'), 0)
+		// reqLogin(values).then(res => {
+		// 	const { success, msg, data } = res
+		// 	if (success && data) {
+		// 		message.success('登录成功')
+		// 		dispatch({ ...globalState, userInfo: data })
+		// 		setTimeout(() => navigate('/'), 0)
+		// 	} else {
+		// 		message.error(msg)
+		// 	}
+		// })
 	}
 
 	return (

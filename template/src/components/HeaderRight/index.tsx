@@ -15,7 +15,8 @@ const HeaderRight: FC<any> = () => {
 	const navigator = useNavigate()
 
 	function handleLoginOut() {
-		reqLoginOut().then(() => navigator('/login'))
+		// reqLoginOut().then(() => navigator('/login'))
+		navigator('/login')
 	}
 
 	function handleOpenModal() {

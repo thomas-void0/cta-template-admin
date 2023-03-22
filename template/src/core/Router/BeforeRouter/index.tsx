@@ -3,6 +3,7 @@ import { Navigate, useLocation } from 'react-router'
 import routes from '@/routes'
 import { searchRoute } from '../utils'
 import { useGlobal } from '@/core/context/global'
+import { isEmpty } from 'lodash-es'
 
 export interface BeforeRouterProps {
 	children: JSX.Element
@@ -19,7 +20,7 @@ const BeforeRouter = (props: BeforeRouterProps) => {
 	const { access } = route
 
 	// 判断是否登录
-	if (!userInfo && route.path !== 'login') {
+	if (isEmpty(userInfo) && route.path !== 'login') {
 		return <Navigate to="/login" replace />
 	}
 

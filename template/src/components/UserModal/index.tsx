@@ -6,6 +6,7 @@ import {
 } from 'react'
 import { Form, Upload, Modal, Input, UploadFile, UploadProps } from 'antd'
 import { RcFile } from 'antd/es/upload'
+import { useGlobal } from '@/core'
 
 export interface UserModalRef {
 	open: () => void
@@ -30,6 +31,8 @@ const onFinish = (values: any) => {
 
 const UserModal: ForwardRefRenderFunction<UserModalRef, {}> = (_, ref) => {
 	const [open, setOpen] = useState(false)
+	const { globalState } = useGlobal()
+	const { userInfo } = globalState
 	const [fileList, setFileList] = useState<UploadFile[]>([
 		{
 			uid: '-1',
@@ -74,12 +77,12 @@ const UserModal: ForwardRefRenderFunction<UserModalRef, {}> = (_, ref) => {
 				name="validate_other"
 				{...formItemLayout}
 				onFinish={onFinish}
-				initialValues={{ 'input-number': 3, 'checkbox-group': ['A', 'B'], rate: 3.5 }}
 				style={{ maxWidth: 600 }}
 			>
 				<Form.Item
 					name="nickName"
 					label="名称"
+					initialValue={userInfo?.nickName}
 					rules={[{ required: true, message: '姓名不能为空!' }]}
 				>
 					<Input />
@@ -97,7 +100,7 @@ const UserModal: ForwardRefRenderFunction<UserModalRef, {}> = (_, ref) => {
 						noStyle
 					>
 						<Upload
-							action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+							action="user/upload"
 							listType="picture-card"
 							fileList={fileList}
 							onChange={onChange}
