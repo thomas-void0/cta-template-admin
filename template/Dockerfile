@@ -6,7 +6,7 @@ ARG PROXY_VERSION=1.22.1
 FROM ${NAME}:${VERSION} as deps
 WORKDIR /workspace
 COPY package-lock.json package.json .npmrc ./
-RUN npm ci
+RUN npm install
 
 FROM ${NAME}:${VERSION} as builder
 WORKDIR /workspace
