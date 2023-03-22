@@ -5,14 +5,16 @@ ARG PROXY_VERSION=1.22.1
 
 FROM ${NAME}:${VERSION} as deps
 WORKDIR /workspace
-COPY package-lock.json package.json .npmrc ./
-RUN npm install
+COPY pnpm-lock.yaml .npmrc ./
+RUN pnpm fetch
+COPY package.json ./
+RUN pnpm install --frozen-lockfile --offline --ignore-scripts
 
 FROM ${NAME}:${VERSION} as builder
 WORKDIR /workspace
 COPY --from=deps /workspace/node_modules ./node_modules
 COPY . .
-RUN npm run build
+RUN pnpm build
 
 FROM ${PROXY}:${PROXY_VERSION} as runer
 LABEL maintainer="thomas-void0 <yjy15680489038@163.com>"
