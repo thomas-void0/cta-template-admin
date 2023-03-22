@@ -1,10 +1,10 @@
-/* global NodeJS */
 import React, { useEffect, useRef } from 'react'
 import ReactDOM from 'react-dom'
 import Nprogress from 'nprogress'
 
 import 'nprogress/nprogress.css'
 import ChaseLoading from '../ChaseLoading'
+import { Timeout } from 'ahooks/lib/useRequest/src/types'
 
 type ProcessLoadingProps = {
 	show: () => void
@@ -21,12 +21,12 @@ Nprogress.configure({
 })
 
 // progress queue: singleton
-const queue: (NodeJS.Timeout | undefined)[] = []
+const queue: (Timeout | undefined)[] = []
 
 const ProcessLoading: ProcessLoadingProps = props => {
 	const { visible = false, spin = false } = props
 
-	const timer = useRef<NodeJS.Timeout>()
+	const timer = useRef<Timeout>()
 
 	useEffect(() => {
 		if (visible) {
