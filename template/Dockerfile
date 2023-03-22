@@ -5,7 +5,7 @@ ARG PROXY_VERSION=1.22.1
 
 FROM ${NAME}:${VERSION} as deps
 WORKDIR /workspace
-RUN npm install pnpm
+RUN npm install -g pnpm
 COPY pnpm-lock.yaml .npmrc ./
 RUN pnpm fetch
 COPY package.json ./
@@ -13,6 +13,7 @@ RUN pnpm install --frozen-lockfile --offline --ignore-scripts
 
 FROM ${NAME}:${VERSION} as builder
 WORKDIR /workspace
+RUN npm install -g pnpm
 COPY --from=deps /workspace/node_modules ./node_modules
 COPY . .
 RUN pnpm build
