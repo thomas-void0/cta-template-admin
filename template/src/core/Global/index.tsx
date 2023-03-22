@@ -1,4 +1,4 @@
-import { FC, ReactNode, useEffect, useMemo, useState } from 'react'
+import { FC, ReactNode, useEffect, useState } from 'react'
 import { InitialStateType, Provider, initGlobalState } from '../context/global'
 
 import accessFactory from '@/config/access'
@@ -11,25 +11,31 @@ export interface GlobalProviderProps {
 const GlobalProvider: FC<GlobalProviderProps> = props => {
 	const { children } = props
 	const [globalState, setGlobalState] = useState<InitialStateType>(initGlobalState)
+	const [isPending, setIsPending] = useState(true)
 
 	useEffect(() => {
-		getInitialState().then(values => {
-			// 获取路由权限
-			const routeAccess = accessFactory(values)
-			// 设置共享全局状态
-			setGlobalState({ ...values, routeAccess })
-		})
+		getInitialState()
+			.then(values => {
+				// 获取路由权限
+				const routeAccess = accessFactory(values)
+				// 设置共享全局状态
+				setGlobalState({ ...values, routeAccess })
+			})
+			.finally(() => {
+				setIsPending(false)
+			})
 	}, [])
 
-	const globalValue = useMemo(
-		() => ({
-			globalState,
-			dispatch: setGlobalState
-		}),
-		[globalState]
+	return (
+		<Provider
+			value={{
+				globalState,
+				dispatch: setGlobalState
+			}}
+		>
+			{!isPending && children}
+		</Provider>
 	)
-
-	return <Provider value={globalValue}>{children}</Provider>
 }
 
 export default GlobalProvider

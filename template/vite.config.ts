@@ -25,13 +25,10 @@ export default defineConfig(({ mode }) => {
 			port: 3000,
 			open: true,
 			proxy: {
-				'/api': {
-					target: proxyTarget.api,
-					changeOrigin: true
-				},
 				'/user': {
-					target: proxyTarget.nr,
-					changeOrigin: true
+					target: proxyTarget.user,
+					changeOrigin: true,
+					ws: true
 				}
 			}
 		},
@@ -39,7 +36,7 @@ export default defineConfig(({ mode }) => {
 			target: 'es2015',
 			reportCompressedSize: false,
 			chunkSizeWarningLimit: 2000,
-			sourcemap: false,
+			sourcemap: mode !== 'production',
 			minify: 'esbuild'
 		}
 	}

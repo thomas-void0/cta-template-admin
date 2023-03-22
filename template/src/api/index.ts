@@ -1,15 +1,34 @@
-import { request, requestLegacy } from '@/core/service'
+import request from '@/core/service'
 
 /** 获取用户登录信息 */
+interface ReqLoginParams {
+	username: string
+	password: string
+}
+export const reqLogin = (data: ReqLoginParams) => {
+	return request.post({
+		url: '/user/login',
+		data
+	})
+}
+
+/* 获取用户信息 */
 export const reqGetUserInfo = () => {
 	return request.get({
-		url: '/getUserInfo'
+		url: '/user/getInfo'
 	})
 }
 
 /** 退出登录 */
 export const reqLoginOut = () => {
-	return requestLegacy.post({
-		url: '/loginOut'
+	return request.post({
+		url: '/user/loginOut'
+	})
+}
+
+/** 注册用户 */
+export const reqSignIn = () => {
+	return request.post({
+		url: '/user/signIn'
 	})
 }

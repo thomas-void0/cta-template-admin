@@ -1,6 +1,4 @@
 const proxyTarget = {
-	api: 'http://test.api.cn',
-	ade: 'http://test.a.cn',
-	nr: 'http://test.main.cn'
+	user: 'http://127.0.0.1:3003/'
 }
 export default proxyTarget

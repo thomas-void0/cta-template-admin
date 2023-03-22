@@ -75,6 +75,10 @@ const routes: RouteConfig[] = [
 		]
 	},
 	{
+		path: 'login',
+		element: lazyLoad(lazy(() => import('@/pages/Login')))
+	},
+	{
 		path: '/403',
 		element: <div className="tw-font-bold">无权限</div>
 	},
