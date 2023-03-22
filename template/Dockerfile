@@ -5,6 +5,7 @@ ARG PROXY_VERSION=1.22.1
 
 FROM ${NAME}:${VERSION} as deps
 WORKDIR /workspace
+RUN npm install -g pnpm
 COPY pnpm-lock.yaml .npmrc ./
 RUN pnpm fetch
 COPY package.json ./
