@@ -11,7 +11,8 @@
 		"lint-staged": "lint-staged",
 		"prepare": "husky install",
 		"lint:js": "eslint **/*.{js,jsx,ts,tsx}",
-		"lint:style": "stylelint --fix **/*.css"
+		"lint:style": "stylelint --fix **/*.css",
+		"deploy":"fool"
 	},
 	"lint-staged": {
 		"**/*.css": "npm run lint:style",
