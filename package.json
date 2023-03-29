@@ -1,6 +1,6 @@
 {
   "name": "cta-template-admin",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "基于react18的模板项目，支持路由keepalive，历史访问页签等",
   "main": "index.js",
   "scripts": {
@@ -28,12 +28,5 @@
   "homepage": "https://github.com/thomas-void0/cta-template-admin#readme",
   "devDependencies": {
     "conventional-changelog-cli": "^2.2.2"
-  },
-  "optionalDependencies": {
-    "fsevents": "^2.3.2"
-  },
-  "dependencies": {
-    "@ant-design/icons": "^5.0.1",
-    "antd-img-crop": "^4.9.0"
   }
 }
