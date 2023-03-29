@@ -1,8 +1,6 @@
-# react + vite 模板项目  
+# react + vite 模板项目
+
 <img src="https://img.shields.io/npm/v/cta-template-admin.svg" alt="npm package"> <img src="https://img.shields.io/badge/Vercel-black?style=flat&logo=Vercel&logoColor=white" alt="Vercel" /> [![Publish](https://github.com/thomas-void0/cta-template-admin/actions/workflows/publish.yml/badge.svg)](https://github.com/thomas-void0/cta-template-admin/actions/workflows/publish.yml)
-[![Docker Image CI](https://github.com/thomas-void0/cta-template-admin/actions/workflows/docker.yml/badge.svg)](https://github.com/thomas-void0/cta-template-admin/actions/workflows/docker.yml)
-
-
 
 <!-- [在线预览](https://th-template.vercel.app/) -->
 

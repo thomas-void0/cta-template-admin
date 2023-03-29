@@ -2,6 +2,6 @@
 	"buildCommand": "yarn build",
 	"devCommand": "yarn start",
 	"framework": "vite",
-	"installCommand": "yarn install --foreground-scripts",
+	"installCommand": "yarn install",
 	"outputDirectory": "dist"
 }
