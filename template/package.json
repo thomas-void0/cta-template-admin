@@ -9,7 +9,7 @@
 		"build": "tsc && vite build  --mode production",
 		"preview": "vite preview",
 		"lint-staged": "lint-staged",
-		"prepare": "node ./gitInit.cjs",
+		"prepare": "husky install",
 		"lint:js": "eslint **/*.{js,jsx,ts,tsx}",
 		"lint:style": "stylelint --fix **/*.css"
 	},
