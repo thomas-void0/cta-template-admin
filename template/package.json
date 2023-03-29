@@ -11,8 +11,7 @@
 		"lint-staged": "lint-staged",
 		"prepare": "node ./prepare.js",
 		"lint:js": "eslint **/*.{js,jsx,ts,tsx}",
-		"lint:style": "stylelint --fix **/*.css",
-		"deploy":"fool"
+		"lint:style": "stylelint --fix **/*.css"
 	},
 	"lint-staged": {
 		"**/*.css": "npm run lint:style",
@@ -30,7 +29,6 @@
 		"blueimp-md5": "^2.19.0",
 		"classnames": "^2.3.2",
 		"echarts": "^5.4.1",
-		"fool-deploy": "^0.1.0",
 		"lodash-es": "^4.17.21",
 		"nprogress": "^0.2.0",
 		"qs": "^6.11.0",
