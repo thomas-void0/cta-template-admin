@@ -2,7 +2,12 @@ import { Navigate, RouteObject } from 'react-router'
 
 import { RouteConfig } from '@/core/Router/type'
 import { lazy } from 'react'
-import { BoldOutlined, WifiOutlined, ThunderboltOutlined } from '@ant-design/icons'
+import {
+	BoldOutlined,
+	WifiOutlined,
+	ThunderboltOutlined,
+	CalendarOutlined
+} from '@ant-design/icons'
 import { lazyLoad } from '@/core/Router/utils'
 
 const routes: RouteConfig[] = [
@@ -69,6 +74,23 @@ const routes: RouteConfig[] = [
 						path: 'common2',
 						name: '共有2',
 						element: <div>共有2</div>
+					}
+				]
+			},
+			{
+				path: 'analyse',
+				name: '数据看板',
+				icon: <CalendarOutlined />,
+				children: [
+					{
+						path: 'sell',
+						name: '销售数据',
+						element: lazyLoad(lazy(() => import('@/pages/Analyse/Sell')))
+					},
+					{
+						path: 'user',
+						name: '用户统计',
+						element: lazyLoad(lazy(() => import('@/pages/Analyse/User')))
 					}
 				]
 			}

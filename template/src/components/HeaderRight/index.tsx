@@ -15,12 +15,10 @@ const HeaderRight: FC<any> = () => {
 	const navigator = useNavigate()
 
 	function handleLoginOut() {
-		// reqLoginOut().then(() => navigator('/login'))
-		navigator('/login')
+		reqLoginOut().then(() => navigator('/login'))
 	}
 
 	function handleOpenModal() {
-		console.log('open')
 		userModalRef.current?.open()
 	}
 
