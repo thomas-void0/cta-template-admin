@@ -22,4 +22,4 @@ FROM ${NGINX}:${NGINX_VERSION} as runer
 WORKDIR /
 COPY --from=builder /workspace/dist/ /usr/share/nginx/html/
 RUN rm /etc/nginx/conf.d/default.conf
-COPY --from=builder /workspace/.fool-cache/nginx.conf /etc/nginx/conf.d/
+COPY --from=builder /workspace/nginx.conf /etc/nginx/conf.d/
