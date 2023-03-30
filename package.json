@@ -1,6 +1,6 @@
 {
   "name": "cta-template-admin",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "基于react18的模板项目，支持路由keepalive，历史访问页签等",
   "main": "index.js",
   "scripts": {

@@ -1,12 +1,8 @@
 import { CreateAxiosDefaults } from 'axios'
 import AxiosPro from './axiosPro'
-import { getEnv } from '@/utils'
 
 export const BASE_CONFIG: CreateAxiosDefaults<any> = {
-	baseURL:
-		getEnv() === 'development'
-			? 'http://127.0.0.1:3003'
-			: 'http://thomas-void0.tech:3003',
+	baseURL: 'http://thomas-void0.tech:3003',
 	timeout: 5000,
 	withCredentials: true,
 	headers: {
