@@ -10,6 +10,7 @@ export const BASE_CONFIG: CreateAxiosDefaults<any> = {
 	}
 }
 
+// 添加auth token，如果有必要的话
 const TOKEN_KEY = '@@cta-template-admin-authorization'
 
 const request = new AxiosPro(BASE_CONFIG)

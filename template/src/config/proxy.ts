@@ -1,4 +1,4 @@
 const proxyTarget = {
-	user: 'http://127.0.0.1:3003/'
+	user: 'http://thomas-void0.tech:3003'
 }
 export default proxyTarget
