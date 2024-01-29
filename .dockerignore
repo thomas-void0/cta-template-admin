@@ -1,0 +1,9 @@
+.gitignore
+.npmignore
+CHANGELOG.md
+commitlint.config.cjs
+Dockerfile
+LICENSE
+README.md
+renovate.json
+vercel.json
