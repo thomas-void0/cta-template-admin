@@ -6,6 +6,7 @@
 	"scripts": {
 		"start": "vite --mode development",
 		"build:test": "tsc && vite build --mode test",
+		"build:pre": "tsc && vite build --mode pre",
 		"build": "tsc && vite build  --mode production",
 		"preview": "vite preview",
 		"lint-staged": "lint-staged",
