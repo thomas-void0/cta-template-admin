@@ -9,7 +9,7 @@
 
 [在线预览](http://124.223.185.160/) | [vercel online](https://th-template.vercel.app/)
 
-<!-- ![image](https://user-images.githubusercontent.com/48620706/209778605-428a6444-55b2-457a-aa0d-42b2cb908b4c.png) -->
+<!-- ![image](https://user-images.githubusercontent.com/48620706/209778605-428a6444-55b2-457a-aa0d-42b2cb908b4c.png) --> 
 
 ![example](./template/public/example.gif)
 
